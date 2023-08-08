@@ -7,7 +7,7 @@ Description: This project is a basic implementation of a shell (command interpre
 - [Installation](#installation)
 - [Compilation](#compilation)
 - [Usage](#usage)
-- [Commands](#allowed commands)
+- [Commands](#commands)
 - [Features](#features)
 
 
