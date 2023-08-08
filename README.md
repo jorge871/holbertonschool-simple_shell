@@ -63,7 +63,7 @@ hsh main.c shell.c test_ls_2
 <summary> <strong> List of allowed functions and system calls:</strong> </summary>
 
 <br>
-```
+```list
 all functions from strings.h
 access (man 2 access)
 chdir (man 2 chdir)
@@ -103,6 +103,13 @@ wait4 (man 2 wait4)
 write (man 2 write)
 ```
 </details>
+
+## Features
+```features
+-Execution of system commands.
+-Interpretation of simple commands.
+-Basic string manipulation functions.
+```
 
 <footer>Maded by
     <a
