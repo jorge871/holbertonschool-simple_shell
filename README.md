@@ -58,12 +58,11 @@ hsh main.c shell.c test_ls_2
 ```
 </details>
 
-## Allowed Commands
+## Commands
 <details open>
-<summary> <strong> Commands</strong> </summary>
+<summary> <strong> List of allowed functions and system calls:</strong> </summary>
 
 <br>
-List of allowed functions and system calls:
 
 all functions from strings.h
 access (man 2 access)
