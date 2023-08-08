@@ -62,7 +62,6 @@ hsh main.c shell.c test_ls_2
 <details open>
 <summary> <strong> List of allowed functions and system calls:</strong> </summary>
 
-<br>
 ```list
 all functions from strings.h
 access (man 2 access)
