@@ -1,0 +1,19 @@
+.TH Simple shell
+
+.SH NAME shell
+
+.SH SYNOPSIS
+
+    ./hsh [command [argumen ...]]
+
+.SH DESCRIPTION
+
+    hsh is our version of the shell that we had to create for this final project.
+
+.TP
+
+    This shell serves as a command-line interpreter, functioning as a program that accepts input commands and subsequently executes them within the operating system.
+
+.SH AUTHORS
+
+Jorge Gómez - Carlos Franco.
