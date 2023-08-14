@@ -1,15 +1,49 @@
 <h1>C - Simple Shell</h1>
 
-Description: This project is a basic implementation of a shell (command interpreter) in the C programming language. It allows users to execute system commands and perform some basic operations.
+Description: 
 
+This project is a basic implementation of a shell (command interpreter) in the C programming language. It allows users to execute system commands and perform some basic operations.
+
+```
+Environment of our Simple Shell
+Language: C
+Editor: VSC by Holberton.
+Compile mode: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+Style rules: Betty.
+```
 ## Table of Contents
-
+- [Output](#output)
 - [Installation](#installation)
 - [Compilation](#compilation)
 - [Usage](#usage)
 - [Commands](#commands)
 - [Features](#features)
 
+## Output
+
+Unless specified otherwise, your program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
+The only difference is when you print an error, the name of the program must be equivalent to your argv[0]
+
+<details open>
+<summary> <strong> Examples </strong> </summary>
+    
+Example of error with sh:
+```    
+$ echo "qwerty" | /bin/sh
+/bin/sh: 1: qwerty: not found
+$ echo "qwerty" | /bin/../bin/sh
+/bin/../bin/sh: 1: qwerty: not found
+$
+```
+Same error with your program hsh:
+```
+$ echo "qwerty" | ./hsh
+./hsh: 1: qwerty: not found
+$ echo "qwerty" | ./././hsh
+./././hsh: 1: qwerty: not found
+$
+```
+</details>
 
 ## Installation
 
