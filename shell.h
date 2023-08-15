@@ -19,9 +19,9 @@ int _strncmp(char *s1, char *s2, int n);
 char *_strdup(char *s);
 char *_strchr(char *s, char c);
 int _execve(char **args);
-ssize_t getline(char **restrict lineptr, size_t *restrict n, FILE *restrict stream);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 char *strtok(char *restrict str, const char *restrict delim);
 void perror(const char *s);
 void _getenv(char **env);
-
+char *_strcat(char *dest, char *src);
 #endif
