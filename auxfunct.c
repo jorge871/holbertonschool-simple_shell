@@ -35,7 +35,7 @@ int _strncmp(char *s1, char *s2, int n)
 	while (*s1 && *s2)
 	{
 		if (*s1 != *s2)
-			return 👎
+			return (n);
 	}
 }
 /**
