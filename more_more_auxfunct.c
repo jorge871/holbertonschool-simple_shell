@@ -50,7 +50,7 @@ int _execve(char **args)
  */
 char *strtok(char *restrict str, const char *restrict delim)
 {
-    char *strtok_custom(char *restrict str, const char *restrict delim) {
+    char *strtok_custom(char *str, const char *delim) {
     static char *saved_str = NULL;
     
     if (str != NULL) {
@@ -81,4 +81,24 @@ char *strtok(char *restrict str, const char *restrict delim)
     
     return token_start;
 }
+}
+/**
+ *_strcat - concatenate two strings
+ *@dest: destination
+ *@src: source
+ *Return: always success
+ */
+
+char *_strcat(char *dest, char *src)
+{
+	int i = 0;
+	int j = 0;
+
+	while (dest[i++])
+		j++;
+
+	for (i = 0; src[i]; i++)
+		dest[j] = src[i];
+
+	return (dest);
 }
