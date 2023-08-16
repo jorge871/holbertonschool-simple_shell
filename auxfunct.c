@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  *_strcmp - Custom string comparison function.
  *@s1: The first string for comparison.
@@ -18,11 +17,6 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-
-
-
-
-
 /**
  *_strncmp - comparing two strings
  *@s1: The first string for comparison.
@@ -30,15 +24,17 @@ int _strcmp(char *s1, char *s2)
  *@n: The maximum number of characters to compare.
  *Return: zero
  */
-int _strncmp(char *s1, char *s2, size_t n)
+int _strncmp(char *s1, char *s2, int n)
 {
 	while (*s1 && *s2)
 	{
 		if (*s1 != *s2)
+		{
 			return (n);
 			s1++;
 			s2++;
 			n--;
+		}	
 	}
 	return (0);
 }
@@ -78,3 +74,4 @@ int cont = 0;
 		return (s + cont);
 	return (0);
 }
+

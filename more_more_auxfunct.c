@@ -52,6 +52,7 @@ int _execve(char **args)
 char *strtok(char *str, const char *delim)
 {
 	static char *saved_str;
+	char *token_start = NULL;
 
 	if (str != NULL)
 		saved_str = str;
@@ -64,8 +65,6 @@ char *strtok(char *str, const char *delim)
 
 	if (*saved_str == '\0')
 		return (NULL);
-
-	char *token_start = saved_str;
 
 	while (*saved_str != '\0' && strchr(delim, *saved_str) == NULL)
 		saved_str++;

@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  *_perror - Custom error message printing function.
  *Prints an error message with additional context.
@@ -73,14 +72,15 @@ int _putchar(char c)
  *Return: env
  */
 
-void _getenv(char **env)
+char *_getenv(const char *name)
 {
 	size_t run = 0;
 
-	while (env[run])
+	while (name[run])
 	{
-		write(STDOUT_FILENO, env[run], _strlen(env[run]));
-		write(STDOUT_FILENO, "\n", 1);
-		run++;
+		write(STDOUT_FILENO, name + run, _strlen((char *)(name + run)));
+        write(STDOUT_FILENO, "\n", 1);
+        run++;
 	}
+	return (NULL);
 }
