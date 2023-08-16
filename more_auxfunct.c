@@ -84,3 +84,19 @@ void _getenv(char **env)
 		run++;
 	}
 }
+
+/**                                                                             
+*_puts - prts env to standard output                                         
+*@str: string
+*Return: string
+*/
+
+void _puts(char *str)
+{
+    while (*str)
+	{
+        putchar(*str);
+        str++;
+    }
+    putchar('\n');
+}

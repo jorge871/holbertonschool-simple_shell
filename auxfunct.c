@@ -19,10 +19,6 @@ int _strcmp(char *s1, char *s2)
 	return (0);
 }
 
-
-
-
-
 /**
  *_strncmp - comparing two strings
  *@s1: The first string for comparison.
@@ -35,7 +31,9 @@ int _strncmp(char *s1, char *s2, size_t n)
 	while (*s1 && *s2)
 	{
 		if (*s1 != *s2)
+		{
 			return (n);
+		}
 			s1++;
 			s2++;
 			n--;

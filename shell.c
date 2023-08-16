@@ -1,4 +1,5 @@
-#include "main.h"
+#include "shell.h"
+
 /**
 * main - program shell
 * @argc: number of given arguments
@@ -40,7 +41,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 			else
 			{
 				status = 127;
-				_perror(argv[0], args[0]);
+				_perror_single("Error message here");
 			}
 		}
 		free_array(args);
