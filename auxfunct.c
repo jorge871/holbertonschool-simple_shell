@@ -1,13 +1,12 @@
 #include "shell.h"
+
 /**
- * _strcmp - Custom string comparison function.
- * Compares two strings and returns an integer indicating their order.
- * 
- * @s1: The first string for comparison.
- * @s2: The second string for comparison.
- *
- * return: zero
+ *_strcmp - Custom string comparison function.
+ *@s1: The first string for comparison.
+ *@s2: The second string for comparison.
+ *Return: zero
  */
+
 int _strcmp(char *s1, char *s2)
 {
 	while (*s1 && *s2)
@@ -19,45 +18,52 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
+
+
+
+
+
 /**
- * _strncmp - Custom substring comparison function.
- * Compares the first 'n' characters of two strings and returns an integer indicating their order.
- * 
- * @s1: The first string for comparison.
- *
- * @s2: The second string for comparison.
- *
- * @n: The maximum number of characters to compare.
- * return:
+ *_strncmp - comparing two strings
+ *@s1: The first string for comparison.
+ *@s2: The second string for comparison.
+ *@n: The maximum number of characters to compare.
+ *Return: zero
  */
-int _strncmp(char *s1, char *s2, int n)
+int _strncmp(char *s1, char *s2, size_t n)
 {
 	while (*s1 && *s2)
 	{
 		if (*s1 != *s2)
 			return (n);
+			s1++;
+			s2++;
+			n--;
 	}
+	return (0);
 }
+
 /**
- * _strlen - Custom string length function.
- * Computes and returns the length of the input string.
- * @s The input string. 
- * return: The length of the input string.
+ *_strlen - Custom string length function.
+ *@s: The input string.
+ *Return: The length of the input string.
  */
+
 int _strlen(char *s)
 {
 	int a;
+
 	a = strlen(s);
 	return (a);
 }
+
 /**
- * Custom string search function.
- * Searches for the first occurrence of a character in a string.
- *
- * @s: The input string. 
- * @c: 
- * return: return zero
+ *_strchr - Custom string search function.
+ *@s: The input string.
+ *@c: The character
+ *Return: return zero
  */
+
 char *_strchr(char *s, char c)
 {
 int cont = 0;

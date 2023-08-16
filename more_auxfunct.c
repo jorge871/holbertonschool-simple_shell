@@ -1,11 +1,13 @@
 #include "shell.h"
+
 /**
- * Perror - Custom error message printing function.
- * Prints an error message with additional context.
- * 
- * @name: The name of the entity causing the error.
- * @cmd: The command or action associated with the error.
+ *_perror - Custom error message printing function.
+ *Prints an error message with additional context.
+ *@name: The name of the entity causing the error.
+ *@cmd: The command or action associated with the error.
+ *Return: Success
  */
+
 void _perror(char *name, char *cmd)
 {
 	char *msg = NULL;
@@ -56,10 +58,10 @@ char *_strdup(char *str)
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
- *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
+
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
@@ -81,3 +83,4 @@ void _getenv(char **env)
 		write(STDOUT_FILENO, "\n", 1);
 		run++;
 	}
+}

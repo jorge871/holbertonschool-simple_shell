@@ -1,4 +1,4 @@
-_#ifndef SHELL_H
+#ifndef SHELL_H
 #define SHELL_H
 
 #include <unistd.h>
@@ -10,18 +10,20 @@ _#ifndef SHELL_H
 #include <string.h>
 #include <signal.h>
 
-extern char **environ
+extern char **environ;
 
 int _putchar(char c);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
-int _strncmp(char *s1, char *s2, int n);
+int _strncmp(char *s1, char *s2, size_t n);
 char *_strdup(char *s);
 char *_strchr(char *s, char c);
 int _execve(char **args);
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-char *strtok(char *restrict str, const char *restrict delim);
+char *strtok(char *str, const char *delim);
 void perror(const char *s);
 void _getenv(char **env);
 char *_strcat(char *dest, char *src);
+
+
 #endif
