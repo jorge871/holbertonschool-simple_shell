@@ -15,9 +15,9 @@ struct stat st;
 extern char **environ;
 
 /*auxfunct*/
-int _strcmp(char *s1, char *s2); 
+int _strcmp(char *s1, char *s2);
 int _strncmp(char *s1, char *s2, size_t n);
-int _strlen(const char *s);     
+int _strlen(const char *s);
 char *_strchr(char *s, char c);
 char *_getenv(const char *name);
 
@@ -25,12 +25,12 @@ char *_getenv(const char *name);
 void _perror(char *name, char *cmd);
 char *_strdup(char *str);
 int _putchar(char c);
-void _print_env(const char **env); 
+void _print_env(const char **env);
 
 /*more_moreauxfunct*/
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 int _execve(char **args);
-char *strtok(char *str, const char *delim); 
+char *strtok(char *str, const char *delim);
 char *_strcat(char *dest, char *src);
 
 /*more_more_auxfunct2*/
