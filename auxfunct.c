@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  *_strcmp - Custom string comparison function.
  *@s1: The first string for comparison.
@@ -47,7 +46,7 @@ int _strncmp(char *s1, char *s2, size_t n)
  *Return: The length of the input string.
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int a;
 
@@ -75,4 +74,23 @@ int cont = 0;
 	if (c == 0)
 		return (s + cont);
 	return (0);
+}
+
+/**
+ *_getenv - prts env to standard output
+ *@name: enviroment
+ *Return: env
+ */
+
+char *_getenv(const char *name)
+{
+	size_t run = 0;
+
+	while (name[run])
+	{
+		write(STDOUT_FILENO, name + run, _strlen((char *)(name + run)));
+		write(STDOUT_FILENO, "\n", 1);
+		run++;
+	}
+	return (NULL);
 }

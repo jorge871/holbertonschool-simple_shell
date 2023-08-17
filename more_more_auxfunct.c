@@ -1,26 +1,28 @@
 #include "shell.h"
 /**
  * _getline_command -  Get inputs
+ * @lineptr: pointer to get buffer where line is stored
+ * @n:stores size of allocated buffer
+ * @stream:The input stream from which the line is read.
  * Return: The input
  */
 
-char *_getline_command(void)
+ssize_t _getline_command(char **lineptr, size_t *n, FILE *stream)
 {
-	char *lineptr = NULL;
-	size_t charter_user = 0;
+	ssize_t chars_read;
 
 	if (isatty(STDIN_FILENO))
-	{
 		write(STDOUT_FILENO, "$ ", 2);
-	}
 
-	if (getline(&lineptr, &charter_user, stdin) == -1)
+	chars_read = getline(lineptr, n, stream);
+
+	if (chars_read == -1)
 	{
 		free(lineptr);
-		return (NULL);
+		return (-1);
 	}
 
-	return (lineptr);
+	return (chars_read);
 }
 
 /**
@@ -52,7 +54,7 @@ int _execve(char **args)
 char *strtok(char *str, const char *delim)
 {
 	static char *saved_str;
-	char *token_start; 
+	char *token_start;
 
 	if (str != NULL)
 		saved_str = str;

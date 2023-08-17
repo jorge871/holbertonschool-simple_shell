@@ -25,11 +25,13 @@ void _perror(char *name, char *cmd)
 	write(2, msg, length - 1);
 	free(msg);
 }
+
 /**
  * _strdup - pointer to a newly allocated space in memory
  * @str: string
  * Return: return array
- */
+*/
+
 char *_strdup(char *str)
 {
 	char *tmp;
@@ -68,12 +70,12 @@ int _putchar(char c)
 }
 
 /**
- *_getenv - prts env to standard output
+ *_print_env - prints env to standard output
  *@env: enviroment
  *Return: env
  */
 
-void _getenv(char **env)
+void _print_env(const char **env)
 {
 	size_t run = 0;
 
@@ -85,18 +87,19 @@ void _getenv(char **env)
 	}
 }
 
-/**                                                                             
-*_puts - prts env to standard output                                         
+/**
+*_puts - prts env to standard output
 *@str: string
 *Return: string
 */
 
 void _puts(char *str)
 {
-    while (*str)
+	while (*str)
 	{
-        putchar(*str);
-        str++;
-    }
-    putchar('\n');
+		putchar(*str);
+		str++;
+	}
+	putchar('\n');
 }
+

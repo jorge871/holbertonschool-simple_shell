@@ -11,24 +11,38 @@
 
 extern char **environ;
 
-int _putchar(char c);
-int _strcmp(char *s1, char *s2);
-int _strlen(char *s);
+/*auxfunct*/
+int _strcmp(char *s1, char *s2); 
 int _strncmp(char *s1, char *s2, size_t n);
-char *_strdup(char *s);
+int _strlen(const char *s);     
 char *_strchr(char *s, char c);
-int _execve(char **args);
-ssize_t getline(char **lineptr, size_t *n, FILE *stream);
-char *strtok(char *str, const char *delim);
+char *_getenv(const char *name);
+
+/*more_auxfunct*/
 void _perror(char *name, char *cmd);
-void _perror_single(const char *s);
-void _getenv(char **env);
+char *_strdup(char *str);
+int _putchar(char c);
+void _print_env(const char **env); 
+
+/*more_moreauxfunct*/
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
+int _execve(char **args);
+char *strtok(char *str, const char *delim); 
 char *_strcat(char *dest, char *src);
-void _puts(char *str); 
+
+/*more_more_auxfunct2*/
+char **generate_arguments(char *s, char *delimeters);
+void _printEnv(void);
+void _puts(char *s);
+char *_which(char *cmd);
+
+
+/*more_more_auxfunct_three*/
+void _perror_singlular(const char *s);
+
+
 char *_path(void);
 void free(void *ptr);
-char **generate_arguments(char *s, char *delimeters);
-void _print_env(void);
 void free_array(char **array);
 
 

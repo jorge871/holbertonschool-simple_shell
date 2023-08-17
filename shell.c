@@ -8,7 +8,7 @@
 */
 int main(int __attribute__((unused)) argc, char **argv)
 {
-	char *buff = NULL, *cm;
+	char *buff = NULL, *cmd;
 	size_t ln = 0;
 	char **args;
 	int status = 0;
@@ -23,28 +23,28 @@ int main(int __attribute__((unused)) argc, char **argv)
 				free(buff);
 			exit(status);
 		}
-		cm = _strdup(buff);
-		strtok(cm, "\n");
-		args = generate_arguments(cm, "\t \n");
-		free(cm);
+		cmd = _strdup(buff);
+		strtok(cmd, "\n");
+		args = generate_arguments(cmd, "\t \n");
+		free(cmd);
 		if (_strcmp(args[0], "env") == 0)
-			_print_env();
+			_print_env((const char **)args);
 		else if (args[0])
 		{
-			cm = _which(args[0]);
-			if (cm)
+			cmd = _which(args[0]);
+			if (cmd)
 			{
 				free(args[0]);
-				args[0] = cm;
+				args[0] = cmd;
 				status = _execve(args);
 			}
 			else
 			{
 				status = 127;
-				_perror_single("Error message here");
+				_perror_singlular(argv[0]);
 			}
 		}
-		free_array(args);
+		free(args);
 	}
 	return (0);
 }
