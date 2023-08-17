@@ -87,19 +87,4 @@ void _print_env(const char **env)
 	}
 }
 
-/**
-*_puts - prts env to standard output
-*@str: string
-*Return: string
-*/
-
-void _puts(char *str)
-{
-	while (*str)
-	{
-		putchar(*str);
-		str++;
-	}
-	putchar('\n');
-}
 

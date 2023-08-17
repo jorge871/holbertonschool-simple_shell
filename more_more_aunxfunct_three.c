@@ -1,14 +1,18 @@
 #include "shell.h"
 
 /**
- *_perror_singular - print error string 
- *@s: string 
- *Return: Error message
+ * free_array - frees a 2 dimensional
+ * @array: Array
+ *Return: free memory
  */
-
-void _perror_singular(const char *s)
+void free_array(char **array)
 {
-    printf("%s\n", s);
+	int i = 0;
+
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }
-
-

@@ -68,8 +68,6 @@ void _puts(char *s)
 		_putchar(*(s + c));
 		c++;
 	}
-
-	_putchar('\n');
 }
 
 /**
@@ -89,7 +87,7 @@ char *_which(char *cmd)
 	if (paths)
 		path = strtok(paths, ":");
 
-	if (_strchr(cmd, '/') && stat(cmd, &status) == 0)
+	if (_strchr(cmd, '/') && stat(cmd, &st) == 0)
 	{
 		if (path)
 			free(path);
@@ -105,7 +103,7 @@ char *_which(char *cmd)
 		_strcat(cmd_path, "/");
 		_strcat(cmd_path, cmd);
 
-		if (_strchr(cmd, '/') && stat(cmd, &status) == 0)
+		if (_strchr(cmd, '/') && stat(cmd, &st) == 0)
 		{
 			free(paths);
 			return (cmd_path);

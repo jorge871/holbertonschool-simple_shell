@@ -41,7 +41,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 			else
 			{
 				status = 127;
-				_perror_singlular(argv[0]);
+				_perror(argv[0], args[0]);
 			}
 		}
 		free(args);
