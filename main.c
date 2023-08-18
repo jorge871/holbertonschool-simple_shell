@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
 * main - program shell
 * @argc: number of given arguments
@@ -8,8 +7,8 @@
 */
 int main(int __attribute__((unused)) argc, char **argv)
 {
-	char *buff = NULL, *cmd;
-	size_t ln = 0;
+	char *buffer = NULL, *cmd;
+	size_t len = 0;
 	char **args;
 	int status = 0;
 
@@ -17,13 +16,13 @@ int main(int __attribute__((unused)) argc, char **argv)
 	{
 		if (isatty(0) == 1)
 			_puts("$ ");
-		if (getline(&buff, &ln, stdin) == -1 || _strcmp(buff, "exit\n") == 0)
+		if (getline(&buffer, &len, stdin) == -1 || _strcmp(buffer, "exit\n") == 0)
 		{
-			if (buff)
-				free(buff);
+			if (buffer)
+				free(buffer);
 			exit(status);
 		}
-		cmd = _strdup(buff);
+		cmd = _strdup(buffer);
 		strtok(cmd, "\n");
 		args = generate_arguments(cmd, "\t \n");
 		free(cmd);

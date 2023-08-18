@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- *_perror - Custom error message printing function.
- *Prints an error message with additional context.
- *@name: The name of the entity causing the error.
- *@cmd: The command or action associated with the error.
- *Return: Success
- */
+*_perror - Custom error message printing function.
+*Prints an error message with additional context.
+*@name: The name of the entity causing the error.
+*@cmd: The command or action associated with the error.
+*Return: Success
+*/
 
 void _perror(char *name, char *cmd)
 {
@@ -27,9 +27,9 @@ void _perror(char *name, char *cmd)
 }
 
 /**
- * _strdup - pointer to a newly allocated space in memory
- * @str: string
- * Return: return array
+* _strdup - pointer to a newly allocated space in memory
+* @str: string
+* Return: return array
 */
 
 char *_strdup(char *str)
