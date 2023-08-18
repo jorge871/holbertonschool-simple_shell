@@ -19,7 +19,7 @@ int _strcmp(char *s1, char *s2);
 int _strncmp(char *s1, char *s2, size_t n);
 int _strlen(const char *s);
 char *_strchr(char *s, char c);
-char *_getenv(const char *name);
+char *_getenv(char *env);
 
 /*more_auxfunct*/
 void _perror(char *name, char *cmd);
@@ -42,9 +42,9 @@ char *_which(char *cmd);
 
 /*more_more_auxfunct_three*/
 void _perror_singlular(const char *s);
-
+void free_array(char **array);
 
 char *_path(void);
 void free(void *ptr);
-void free_array(char **array);
+
 #endif

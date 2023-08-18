@@ -78,19 +78,27 @@ int cont = 0;
 
 /**
  *_getenv - prts env to standard output
- *@name: enviroment
+ *@env: enviroment
  *Return: env
  */
 
-char *_getenv(const char *name)
+char *_getenv(char *env)
 {
-	size_t run = 0;
+	char *aux;
+	char *content;
+	int i = 0;
 
-	while (name[run])
+	for (; environ[i]; i++)
 	{
-		write(STDOUT_FILENO, name + run, _strlen((char *)(name + run)));
-		write(STDOUT_FILENO, "\n", 1);
-		run++;
+		aux = _strdup(environ[i]);
+		aux = strtok(aux, "=");
+		if (_strcmp(aux, env) == 0)
+		{
+			content = _strdup(strtok(NULL, "="));
+			free(aux);
+			return (content);
+		}
+		free(aux);
 	}
 	return (NULL);
 }

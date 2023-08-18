@@ -71,7 +71,6 @@ int _putchar(char c)
 
 /**
  *_print_env - prints env to standard output
- *@env: enviroment
  *Return: env
  */
 
@@ -85,5 +84,4 @@ void _print_env(void)
 		_putchar('\n');
 	}
 }
-
 
