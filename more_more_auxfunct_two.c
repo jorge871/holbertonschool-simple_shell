@@ -38,20 +38,6 @@ char **generate_arguments(char *s, char *delimeters)
 	return (args);
 }
 
-/**
-*_printEnv - function that prints environment variables
-*Return: environment
-*/
-void _printEnv(void)
-{
-	int p;
-
-	for (p = 0; environ && environ[p]; p++)
-	{
-		_puts(environ[p]);
-		_putchar('\n');
-	}
-}
 
 /**
  * _puts - Print a string
@@ -103,7 +89,7 @@ char *_which(char *cmd)
 		_strcat(cmd_path, "/");
 		_strcat(cmd_path, cmd);
 
-		if (_strchr(cmd, '/') && stat(cmd, &st) == 0)
+		if  (stat(cmd_path, &st) == 0)
 		{
 			free(paths);
 			return (cmd_path);

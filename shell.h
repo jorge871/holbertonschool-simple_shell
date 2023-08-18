@@ -25,7 +25,7 @@ char *_getenv(const char *name);
 void _perror(char *name, char *cmd);
 char *_strdup(char *str);
 int _putchar(char c);
-void _print_env(const char **env);
+void _print_env(void);
 
 /*more_moreauxfunct*/
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);

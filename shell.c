@@ -28,7 +28,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 		args = generate_arguments(cmd, "\t \n");
 		free(cmd);
 		if (_strcmp(args[0], "env") == 0)
-			_print_env((const char **)args);
+			_print_env();
 		else if (args[0])
 		{
 			cmd = _which(args[0]);
@@ -44,7 +44,7 @@ int main(int __attribute__((unused)) argc, char **argv)
 				_perror(argv[0], args[0]);
 			}
 		}
-		free(args);
+		free_array(args);
 	}
 	return (0);
 }

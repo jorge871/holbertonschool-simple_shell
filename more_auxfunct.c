@@ -75,15 +75,14 @@ int _putchar(char c)
  *Return: env
  */
 
-void _print_env(const char **env)
+void _print_env(void)
 {
-	size_t run = 0;
+	int i;
 
-	while (env[run])
+	for (i = 0; environ && environ[i]; i++)
 	{
-		write(STDOUT_FILENO, env[run], _strlen(env[run]));
-		write(STDOUT_FILENO, "\n", 1);
-		run++;
+		_puts(environ[i]);
+		_putchar('\n');
 	}
 }
 
