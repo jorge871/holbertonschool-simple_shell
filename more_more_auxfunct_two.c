@@ -101,3 +101,19 @@ char *_which(char *cmd)
 		free(paths);
 	return (NULL);
 }
+
+/**
+ * free_array - frees a 2 dimensional
+ * @array: Array
+ */
+void free_array(char **array)
+{
+	int i = 0;
+
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+}

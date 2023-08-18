@@ -44,43 +44,6 @@ int _execve(char **args)
 	return (WEXITSTATUS(status));
 }
 
-/**
- *strtok - Custom string tokenization function.
- *@str: The input string to be tokenized.
- *@delim: The delimiter used to separate tokens.
- *Return: A pointer to the next token found
- */
-
-char *strtok(char *str, const char *delim)
-{
-	static char *saved_str;
-	char *token_start;
-
-	if (str != NULL)
-		saved_str = str;
-
-	if (saved_str == NULL || *saved_str == '\0')
-		return (NULL);
-
-	while (*saved_str != '\0' && strchr(delim, *saved_str) != NULL)
-		saved_str++;
-
-	if (*saved_str == '\0')
-		return (NULL);
-
-	token_start = saved_str;
-
-	while (*saved_str != '\0' && strchr(delim, *saved_str) == NULL)
-		saved_str++;
-
-	if (*saved_str != '\0')
-	{
-		*saved_str = '\0';
-		saved_str++;
-	}
-
-	return (token_start);
-}
 
 /**
  *_strcat - concatenate two strings

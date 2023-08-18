@@ -35,16 +35,8 @@ char *_strcat(char *dest, char *src);
 
 /*more_more_auxfunct2*/
 char **generate_arguments(char *s, char *delimeters);
-void _printEnv(void);
 void _puts(char *s);
 char *_which(char *cmd);
-
-
-/*more_more_auxfunct_three*/
-void _perror_singlular(const char *s);
 void free_array(char **array);
-
-char *_path(void);
-void free(void *ptr);
 
 #endif
