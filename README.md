@@ -143,6 +143,9 @@ write (man 2 write)
 -Interpretation of simple commands.
 -Basic string manipulation functions.
 ```
+## Flowchart
+
+![image](https://github.com/jorge871/holbertonschool-simple_shell/assets/108559276/2df943e1-0111-450e-a304-dddbadffad98)
 
 <footer>Maded by
     <a
